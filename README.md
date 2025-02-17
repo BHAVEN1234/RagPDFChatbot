@@ -25,11 +25,9 @@ This project creates an AI-powered PDF chatbot that allows users to upload PDF d
     -   [Uploading PDFs](#uploading-pdfs)
     -   [Asking Questions](#asking-questions)
     -   [Settings](#settings)
--   [Project Structure](#project-structure)
 -   [Code Explanation](#code-explanation)
     -   [Backend (FastAPI)](#backend-fastapi)
     -   [Frontend (Streamlit)](#frontend-streamlit)
--   [Deployment](#deployment)
 -   [Contributing](#contributing)
 -   [License](#license)
 
@@ -222,13 +220,6 @@ Before you begin, make sure you have the following:
     -   Uses `streamlit_option_menu` for navigation.
     -   Uses `requests` to communicate with the backend.
     -   Implements a dark theme using custom CSS.
-
-## [Deployment](pplx://action/followup)
-
-The AI PDF Chatbot can be deployed on various platforms, including:
-
--   **[Cloud Platforms](pplx://action/followup)**: AWS, Google Cloud, Azure.
--   **[Containerization](pplx://action/followup)**: Docker, Kubernetes.
 
 ## [Contributing](pplx://action/followup)
 
