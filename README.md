@@ -90,7 +90,7 @@ Before you get started, ensure you have:
 5.  **Run the Backend**
 
     ```
-    uvicorn main:app --reload
+     uvicorn backend:app --host 127.0.0.1 --port 8001 --reload
     ```
 
     The backend will start at `http://127.0.0.1:8001`.
@@ -102,22 +102,7 @@ Before you get started, ensure you have:
     ```
     cd <frontend_directory>
     ```
-
-2.  **Create and Activate a Virtual Environment**
-
-    ```
-    python -m venv venv
-    source venv/bin/activate  # On Linux/macOS
-    venv\Scripts\activate  # On Windows
-    ```
-
-3.  **Install Dependencies**
-
-    ```
-    pip install -r requirements.txt
-    ```
-
-4.  **Run the Frontend**
+2.  **Run the Frontend**
 
     ```
     streamlit run app.py
@@ -192,3 +177,37 @@ Before you get started, ensure you have:
         -   Qdrant API Key: Enter your Qdrant API key.
         -   Embedding Model: Select the desired embedding model from the dropdown menu.
 3.  Click the "Save Settings" button.
+
+## 💻 Code Explanation
+
+### Backend (FastAPI)
+
+-   **`main.py`**: Contains the FastAPI application logic.
+    -   `/upload-pdf`: Endpoint for uploading and processing PDF files.
+    -   `/query`: Endpoint for receiving questions and returning answers.
+    -   `/set-settings`: Endpoint for updating API keys and model configurations.
+    -   Uses `PyPDF2` to extract text from PDFs.
+    -   Uses `SentenceTransformer` to generate embeddings.
+    -   Uses `QdrantClient` to interact with the vector database.
+    -   Uses `ChatGroq` to generate answers.
+
+### Frontend (Streamlit)
+
+-   **`app.py`**: Contains the Streamlit application logic.
+    -   Provides a user interface for uploading PDFs, asking questions, and configuring settings.
+    -   Uses `streamlit_option_menu` for navigation.
+    -   Uses `requests` to communicate with the backend.
+    -   Implements a dark theme using custom CSS.
+
+## 🤝 Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1.  Fork the repository.
+2.  Create a new branch.
+3.  Implement your changes.
+4.  Submit a pull request.
+
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE).
