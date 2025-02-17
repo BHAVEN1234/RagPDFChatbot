@@ -125,22 +125,7 @@ Before you begin, make sure you have the following:
     ```
     cd <frontend_directory>
     ```
-
-2.  **Create and Activate a Virtual Environment**
-
-    ```
-    python -m venv venv
-    source venv/bin/activate  # On Linux/macOS
-    venv\Scripts\activate  # On Windows
-    ```
-
-3.  **Install Dependencies**
-
-    ```
-    pip install -r requirements.txt
-    ```
-
-4.  **Run the Frontend**
+2.  **Run the Frontend**
 
     ```
     streamlit run app.py
