@@ -115,7 +115,7 @@ Before you begin, make sure you have the following:
 5.  **[Run the Backend](pplx://action/followup)**
 
     ```
-    uvicorn main:app --reload
+    uvicorn backend:app --host 127.0.0.1 --port 8001 --reload
     ```
 
     The backend will start at `http://127.0.0.1:8001`.
@@ -127,22 +127,7 @@ Before you begin, make sure you have the following:
     ```
     cd <frontend_directory>
     ```
-
-2.  **[Create and Activate a Virtual Environment](pplx://action/followup)**
-
-    ```
-    python -m venv venv
-    source venv/bin/activate  # On Linux/macOS
-    venv\Scripts\activate  # On Windows
-    ```
-
-3.  **[Install Dependencies](pplx://action/followup)**
-
-    ```
-    pip install -r requirements.txt
-    ```
-
-4.  **[Run the Frontend](pplx://action/followup)**
+2.  **[Run the Frontend](pplx://action/followup)**
 
     ```
     streamlit run app.py
@@ -216,5 +201,3 @@ Before you begin, make sure you have the following:
         -   Qdrant API Key: Enter your Qdrant API key.
         -   Embedding Model: Select the desired embedding model from the dropdown menu.
 3.  Click the "Save Settings" button to save your configuration.
-
-## [Project Structure](pplx://action/followup)
